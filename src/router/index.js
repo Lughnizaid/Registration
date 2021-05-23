@@ -27,17 +27,6 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
   },
-  {
-    path: '/dashboard',
-    name: 'Dashboard',
-    component: () =>
-        import(
-            /* webpackChunkName: "dashboard" */ '../views/Dashboard.vue'
-        ),
-    meta: {
-        authRequired: true,
-    },
-  },
 ]
 
 const router = new VueRouter({
